@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="TheGameMauiNET6.MainPage">
+
+    <ScrollView>
+        <!--<VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            VerticalOptions="Center">-->
+        <Grid
+            Padding="10"
+            RowDefinitions="*, 200, *"
+            ColumnDefinitions="*, 200, *"
+            ColumnSpacing="20" >
+
+
+            <Label
+                Text="Welcome!"
+                HorizontalOptions="Center"
+                FontSize="40"
+                Grid.Column="1" />
+
+            <Label
+                Text="Choose a character"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Grid.Column="1"
+                Grid.Row="1"
+ />
+
+            <ImageButton
+                Source="knightidle.png"
+                Scale=".50"
+                Clicked="OnKnightPicClicked"/>
+
+            <ImageButton
+                Source="wizardidle.png"
+                Scale=".50"
+                Grid.Column="2"
+                Clicked="OnWizardPicClicked"/>
+
+
+            </Grid>
+        <!--</VerticalStackLayout>-->
+    </ScrollView>
+
+</ContentPage>
