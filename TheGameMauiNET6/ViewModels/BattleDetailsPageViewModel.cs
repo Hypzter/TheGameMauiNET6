@@ -23,6 +23,9 @@ namespace TheGameMauiNET6.ViewModels
         [ObservableProperty]
         public int heroHealthPoints;
 
+        [ObservableProperty]
+        public int heroPhysicalAttack;
+
         
 
         public BattleDetailsPageViewModel()
@@ -30,6 +33,7 @@ namespace TheGameMauiNET6.ViewModels
 
             HeroImageSource = Data.PlayableCharacter.ImageSource;
             HeroHealthPoints = Data.PlayableCharacter.HealthPoints;
+            HeroPhysicalAttack = Data.PlayableCharacter.PhysicalAttack;
         }
     }
 }
