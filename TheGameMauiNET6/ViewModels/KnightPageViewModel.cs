@@ -1,4 +1,5 @@
-﻿using CommunityToolkit.Mvvm.ComponentModel;
+﻿
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
@@ -15,9 +16,18 @@ namespace TheGameMauiNET6.ViewModels
         [ObservableProperty]
         public Models.Knight goKnight;
 
+        public Data.ChosenHero ChosenHero { get; set; }
+
+        [ObservableProperty]
+        int healthPoints;
+
+        [ObservableProperty]
+        int level;
+
         public KnightPageViewModel()
         {
-            GoKnight = new Models.Knight();
-        }      
+            GoKnight = Models.Knight.GetKnight();
+            ChosenHero = Data.ChosenHero.GetPlayableCharacter();
+        }
     }
 }

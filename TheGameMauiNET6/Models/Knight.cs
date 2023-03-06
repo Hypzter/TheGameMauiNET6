@@ -16,6 +16,8 @@ namespace TheGameMauiNET6.Models
         public int CriticalChance { get; set; }
         public string ImageSource { get; set; }
 
+        private static readonly Knight _knight = new Knight();
+
         public Knight()
         {
             Level = 1; // SessionData.Level hämtar data från statisk klass
@@ -23,7 +25,12 @@ namespace TheGameMauiNET6.Models
             PhysicalAttack = 10;
             MagicalAttack = 2;
             CriticalChance = 3;
-            ImageSource = "knight.png";
+            ImageSource = "knightidle.png";
+        }
+
+        public static Knight GetKnight()
+        {
+            return _knight;
         }
     }
 }

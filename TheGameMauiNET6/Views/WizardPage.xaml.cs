@@ -21,12 +21,12 @@ public partial class WizardPage : ContentPage
             {
                 wpvm.GoWizard.Name = NameInput.Text;
                 
-                Data.PlayableCharacter.Name = wpvm.GoWizard.Name;
-                Data.PlayableCharacter.HealthPoints = wpvm.GoWizard.HealthPoints;
-                Data.PlayableCharacter.PhysicalAttack = wpvm.GoWizard.PhysicalAttack;
-                Data.PlayableCharacter.MagicalAttack = wpvm.GoWizard.MagicalAttack;
-                Data.PlayableCharacter.CriticalChance = wpvm.GoWizard.CriticalChance;
-                Data.PlayableCharacter.ImageSource = wpvm.GoWizard.ImageSource;
+                //Data.ChosenHero.Name = wpvm.GoWizard.Name;
+                //Data.ChosenHero.HealthPoints = wpvm.GoWizard.HealthPoints;
+                //Data.ChosenHero.PhysicalAttack = wpvm.GoWizard.PhysicalAttack;
+                //Data.ChosenHero.MagicalAttack = wpvm.GoWizard.MagicalAttack;
+                //Data.ChosenHero.CriticalChance = wpvm.GoWizard.CriticalChance;
+                //Data.ChosenHero.ImageSource = wpvm.GoWizard.ImageSource;
 
                 await Navigation.PushAsync(new BattlePage());
             }

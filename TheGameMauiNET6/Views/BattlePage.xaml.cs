@@ -1,3 +1,5 @@
+using TheGameMauiNET6.Data;
+
 namespace TheGameMauiNET6.Views;
 
 public partial class BattlePage : ContentPage

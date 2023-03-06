@@ -22,7 +22,7 @@ namespace TheGameMauiNET6.Models
             PhysicalAttack = 2;
             MagicalAttack = 15;
             CriticalChance = 5;
-            ImageSource = "wizard.png";
+            ImageSource = "wizardidle.png";
         }
     }
 

@@ -24,14 +24,13 @@ public partial class KnightPage : ContentPage
 			bool answer = await DisplayAlert("Confirm", "Are you happy with your name?", "Yes", "Cancel");
 			if (answer == true)
 			{
-				kpvm.GoKnight.Name = NameInput.Text;
+				kpvm.ChosenHero.HeroName = NameInput.Text;
+				kpvm.ChosenHero.HeroLevel = kpvm.GoKnight.Level;
+				kpvm.ChosenHero.HeroPhysicalAttack = kpvm.GoKnight.PhysicalAttack;
+				kpvm.ChosenHero.HeroMagicalAttack = kpvm.GoKnight.PhysicalAttack;
+				kpvm.ChosenHero.HeroCriticalChance = kpvm.GoKnight.CriticalChance;
+				kpvm.ChosenHero.HeroImageSource = kpvm.GoKnight.ImageSource;
 
-				Data.PlayableCharacter.Name = kpvm.GoKnight.Name;
-				Data.PlayableCharacter.HealthPoints = kpvm.GoKnight.HealthPoints;
-				Data.PlayableCharacter.PhysicalAttack = kpvm.GoKnight.PhysicalAttack;
-				Data.PlayableCharacter.MagicalAttack = kpvm.GoKnight.MagicalAttack;
-				Data.PlayableCharacter.CriticalChance = kpvm.GoKnight.CriticalChance;
-				Data.PlayableCharacter.ImageSource = kpvm.GoKnight.ImageSource;
 
 				await Navigation.PushAsync(new BattlePage());
 			}
